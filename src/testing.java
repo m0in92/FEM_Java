@@ -17,5 +17,13 @@ public class testing {
         var pr1 = new FePrintWriter();
         UTIL.printDate(pr1.getPrinter("test.txt")); // checks calendar write to test.txt
         out.println(UTIL.direction("xc")); // checks directions method
+
+        // test util.FeScanner
+        FeScanner feScanner1 = new FeScanner("f.fem");
+        out.println(feScanner1.hasNext());
+//        out.println(feScanner1.readInt());
+//        out.println(feScanner1.readDouble());
+        feScanner1.moveAfterLineWithWord("material");
+        out.println(feScanner1.next());
     }
 }

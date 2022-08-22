@@ -1,0 +1,17 @@
+stressState = PLSTRESS # Plane stress state
+thermalLoading = Y # Enable thermal loading
+
+# Finite element mesh
+includeFile f.mesh
+
+# Material properties:
+material = 1 1 0.3 0.1
+
+# Constraints
+constrDispl = x 0.0 2 1 -3
+constrDispl = y 0.0 5 1 4 6 9 11
+end
+
+# Load case
+includeFile f.load
+end
