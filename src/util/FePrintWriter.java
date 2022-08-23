@@ -8,10 +8,10 @@ public class FePrintWriter {
     PrintWriter PR;
     public PrintWriter getPrinter(String fileOut) {
         try {
-            PR = new PrintWriter(new BufferedWriter(new FileWriter(fileOut)));
+            this.PR = new PrintWriter(new BufferedWriter(new FileWriter(fileOut)));
         } catch (Exception e) {
             UTIL.errorMsg("cannot open output file: " + fileOut);
         }
-        return PR;
+        return this.PR;
     }
 }
